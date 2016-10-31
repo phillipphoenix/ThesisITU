@@ -34,6 +34,7 @@ namespace Ganzfeld
 
         public void StartAnimation()
         {
+            StopAnimation();
             StartCoroutine(SeqRunner());
         }
 
