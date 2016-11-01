@@ -9,7 +9,7 @@ namespace Ganzfeld
     public class LightController : MonoBehaviour
     {
         [SerializeField]
-        private List<LightTarget> _lightSequence;
+        private List<LightSequence> _sequenceList;
         [SerializeField]
         private List<Light> _lights;
         [SerializeField]
@@ -47,18 +47,24 @@ namespace Ganzfeld
         {
             do
             {
-                foreach (var target in _lightSequence)
+                foreach (LightSequence sequence in _sequenceList)
                 {
-                    Color start = CurrentColor;
-                    Color end = target.Color;
-                    float startTime = Time.time;
-                    float endTime = startTime + target.Duration;
-                    do
+                    for (int i = 0; i < sequence.RepeatCount; ++i)
                     {
-                        Color newColor = target.Duration == 0 ? end : Color.Lerp(start, end, (Time.time - startTime) / target.Duration);
-                        SetNewColor(newColor);
-                        yield return null;
-                    } while (Time.time <= endTime);
+                        foreach (LightTarget target in sequence.Targets)
+                        {
+                            Color start = CurrentColor;
+                            Color end = target.Color;
+                            float startTime = Time.time;
+                            float endTime = startTime + target.Duration;
+                            do
+                            {
+                                Color newColor = target.Duration == 0 ? end : Color.Lerp(start, end, (Time.time - startTime) / target.Duration);
+                                SetNewColor(newColor);
+                                yield return null;
+                            } while (Time.time <= endTime);
+                        }
+                    }
                 }
             } while (Loop);
         }
