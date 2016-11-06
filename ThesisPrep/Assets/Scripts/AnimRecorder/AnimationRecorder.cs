@@ -12,12 +12,14 @@ namespace AnimRecorder
             get { return (Time.time - _recordingStartTime) / _recordingTime; }
         }
 
+        public bool RecordOnStart { get { return _recordOnStart; } }
+
         public bool IsRecording { get; private set; }
 
         public bool HoldsRecording {
             get
             {
-                return _recordings.Count > 0 && _recordings[0].AnimRecordingItems.Count > 0;
+                return _recordings != null && _recordings.Count > 0 && _recordings[0] != null && _recordings[0].AnimRecordingItems != null && _recordings[0].AnimRecordingItems.Count > 0;
             }
         }
 

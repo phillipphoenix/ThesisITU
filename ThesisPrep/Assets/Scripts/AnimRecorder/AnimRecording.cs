@@ -30,5 +30,15 @@ namespace AnimRecorder
             });
         }
 
+        public Vector3 GetRecordingPosition(int recordingIndex) {
+            AnimRecordingItem recording = AnimRecordingItems[recordingIndex];
+            return new Vector3(recording.PosX, recording.PosY, recording.PosZ);
+        }
+
+        public Vector3 GetRecordingRotation(int recordingIndex) {
+            AnimRecordingItem recording = AnimRecordingItems[recordingIndex];
+            return new Vector3(recording.RotX, recording.RotY, recording.RotZ);
+        }
+
     }
 }

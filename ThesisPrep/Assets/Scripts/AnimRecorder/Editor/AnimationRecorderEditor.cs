@@ -1,7 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using UnityEditor;
@@ -15,12 +13,17 @@ namespace AnimRecorder.EditorTools
     {
         public override void OnInspectorGUI()
         {
-            DrawDefaultInspector();
+            DrawPropertiesExcluding(serializedObject, "m_Script");
 
             AnimationRecorder animRec = (AnimationRecorder) target;
 
             EditorGUILayout.LabelField("Recording progress", EditorStyles.boldLabel);
-            if (!animRec.HoldsRecording || animRec.IsRecording)
+            if (!animRec.RecordOnStart && !animRec.HoldsRecording && !animRec.IsRecording) {
+                if (GUILayout.Button("Start recording")) {
+                    animRec.StartRecording();
+                }
+            }
+            else if (!animRec.HoldsRecording || animRec.IsRecording)
             {
                 Rect r = EditorGUILayout.BeginVertical();
                 EditorGUI.ProgressBar(r, animRec.RecordingProgress, "Recording progress");
@@ -64,21 +67,6 @@ namespace AnimRecorder.EditorTools
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentException("Input needs to be a non-empty string.");
             return input.First().ToString().ToUpper() + input.Substring(1);
-        }
-
-        [Serializable]
-        private class AnimRecordingFile
-        {
-            public string GameObjectName;
-            public float AnimationDuration;
-            public List<AnimRecording> Recordings;
-
-            public AnimRecordingFile(string gameObjectName, float animationDuration, List<AnimRecording> recordings)
-            {
-                GameObjectName = gameObjectName;
-                AnimationDuration = animationDuration;
-                Recordings = recordings;
-            }
         }
     }
 }
