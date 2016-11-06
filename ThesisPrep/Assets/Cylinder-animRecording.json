@@ -1,0 +1,146 @@
+{
+  "GameObjectName": "Cylinder",
+  "AnimationDuration": 5.0,
+  "Recordings": [
+    {
+      "AnimRecordingItems": [
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 0.0,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -0.25,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -11.24,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -7.04,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -6.39,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 2.81,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 9.57,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -0.62,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": 2.15,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        },
+        {
+          "PosX": -2.35,
+          "PosY": 0.0,
+          "PosZ": 0.0,
+          "RotX": 0.0,
+          "RotY": 0.0,
+          "RotZ": 0.0
+        }
+      ]
+    }
+  ]
+}
